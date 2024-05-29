@@ -16,12 +16,12 @@ CREATE TABLE tb_noticias (
 id_noticia				INT NOT NULL AUTO_INCREMENT,
 titulo					VARCHAR (255) NOT NULL,
 noticia					TEXT NOT NULL,
-datahora					DATETIME CURRENT_TIMESTAMP,
+datahora					TIMESTAMP NOT NULL DEFAULT  CURRENT_TIMESTAMP,
 imagem					VARCHAR (255),
 fonte						VARCHAR (255),
 autor						VARCHAR (255),
 PRIMARY KEY (id_noticia)
 );
-INSERT INTO tb_noticia (titulo,noticia,imagem,fonte,autor) VALUES
+INSERT INTO tb_noticias (titulo,noticia,imagem,fonte,autor) VALUES
 ('Nosso primeiro POST','Criando um site de notícia','foto1.jpg','Etec Pinhal','Jorge');
-SELECT * FROM tb_noticia;
+SELECT * FROM tb_noticias;

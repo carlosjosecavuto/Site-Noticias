@@ -1,3 +1,6 @@
+<?php
+include_once "cenexao.php";
+?>
 <!DOCTYPE html>
 <html lang="br-pt">
 <head>
@@ -11,22 +14,24 @@
         <header>
             <img src="img/logo.png" alt="Logo PinhalNews" class="logo">
             <div class="titulos">
-                <spam class="titulo1">PinhalNews</spam>
+                <spam class="titulo1">PINHALNEWS</spam>
                 <p class="titulo2">seu site de notícias da cidade e do mundo.</p>
             </div>
         </header>
         <nav>
             <ul>
-                <li><a href="#">Principal</a></li>
-                <li><a href="#">Todas as Noticias</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#">PRIMEIRA PAGINA</a></li>
+                <li><a href="#">MANCHETES</a></li>
+                <li><a href="#">QUEM SOMOS</a></li>
+                <li><a href="#">CONTATO</a></li>
                 <li><a href="#">Area Restrita</a></li>
             </ul>
         </nav>
         <main>
             <article>
-                conteudo 1
+                <img src="img/ac7e5c10-c12f-11ee-896d-39d9bd3cadbb.jpg" alt="foto noticia" class="fotonoticia">
+                <p class="textonoticia">lugares bonitos</p>
+                <img src="img/saibamais.png" alt="saiba mais" class="saibamais"> 
             </article>
             <article>
                 conteudo 2
