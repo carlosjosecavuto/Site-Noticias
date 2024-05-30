@@ -29,20 +29,23 @@ include_once "conexao.php";
         </nav>
         <main>
             <?php
-            $sql = "SELECT * FROM tb_noticia ORDER BY RAND() LIMIT 6;";
-            $resultado = mysqli_execute_query($conexao, $sql);
-            while($dados= mysqli_fetch_array($resultado))
+            $id_noticia = $-get['id_noticia'];
+            if(!id_noticia)
             {
-                echo '
-                <article>
-                <img src="img/'.$dados["imagem"].'" alt="foto noticia" class="fotonoticia">
-                <p class="textonoticia">'.$dados["titulo"].'</p>
-                <a href="noticia.php?id_noticia='.$dados["id_noticia"].'">
-                <img src="img/saibamais.png" alt="saiba mais" class="saibamais">
-                </a> 
-                </article>
-                ';
+                 echo 'tem conteudo';
+                 $sql = "SELECT * FROM td_noticia WHERE id_noticia = $id_noticia;";
+                 $resultado = mysqli_execute_query($conexao, $sql);
+                 $dados = mysqli_fetch_array($resultado);
+                 echo "titulo: ".$dados['titulo'].'<br>';
+                 echo "data e hora: ".$dados['datahora'].'<br>';
+                 echo "imagem: ".$dados['imagem'].'<br>';
+                 echo "fonye: ".$dados['fonte']. '<br>';
+                 echo "autor: ".$dados['autor'].'<br>';
+                 echo "noticia: ".$dados['noticia'].'<br>';                    
+            }else{
+                echo 'nao tem conteudo';
             }
+
             ?>
           
            
