@@ -12,7 +12,7 @@ include_once "conexao.php";
 <body>
     <div id="container">
         <header>
-            <img src="img/logo.png" alt="Logo PinhalNews" class="logo">
+            <img src="img/NEWS.jpg" alt="Logo PinhalNews" class="logo">
             <div class="titulos">
                 <spam class="titulo1">PINHALNEWS</spam>
                 <p class="titulo2">seu site de notícias da cidade e do mundo.</p>
@@ -24,7 +24,7 @@ include_once "conexao.php";
                 <li><a href="#">MANCHETES</a></li>
                 <li><a href="#">QUEM SOMOS</a></li>
                 <li><a href="#">CONTATO</a></li>
-                <li><a href="#">Area Restrita</a></li>
+                <li><a href="#">AREA RESTRITA</a></li>
             </ul>
         </nav>
         <main>

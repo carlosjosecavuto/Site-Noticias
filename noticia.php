@@ -29,11 +29,10 @@ include_once "conexao.php";
         </nav>
         <main>
             <?php
-            $id_noticia = $-get['id_noticia'];
-            if(!id_noticia)
+            $id_noticia = @$_GET['id_noticia'];
+            if($id_noticia)
             {
-                 echo 'tem conteudo';
-                 $sql = "SELECT * FROM td_noticia WHERE id_noticia = $id_noticia;";
+                 $sql = "SELECT * FROM tb_noticia WHERE id_noticia = $id_noticia;";
                  $resultado = mysqli_execute_query($conexao, $sql);
                  $dados = mysqli_fetch_array($resultado);
                  echo "titulo: ".$dados['titulo'].'<br>';
