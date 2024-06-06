@@ -20,14 +20,14 @@ include_once "conexao.php";
         </header>
         <nav>
             <ul>
-                <li><a href="#">PRIMEIRA PAGINA</a></li>
-                <li><a href="#">MANCHETES</a></li>
-                <li><a href="#">QUEM SOMOS</a></li>
-                <li><a href="#">CONTATO</a></li>
-                <li><a href="#">Area Restrita</a></li>
+                <li><a href="index.php">PRIMEIRA PAGINA</a></li>
+                <li><a href="manchetes.php">MANCHETES</a></li>
+                <li><a href="quem.php">QUEM SOMOS</a></li>
+                <li><a href="contato.php">CONTATO</a></li>
+                <li><a href="area.php">Area Restrita</a></li>
             </ul>
         </nav>
-        <main>
+        <main id="main-padrao">
             <?php
             $id_noticia = @$_GET['id_noticia'];
             if($id_noticia)
@@ -35,12 +35,14 @@ include_once "conexao.php";
                  $sql = "SELECT * FROM tb_noticia WHERE id_noticia = $id_noticia;";
                  $resultado = mysqli_execute_query($conexao, $sql);
                  $dados = mysqli_fetch_array($resultado);
-                 echo "titulo: ".$dados['titulo'].'<br>';
-                 echo "data e hora: ".$dados['datahora'].'<br>';
-                 echo "imagem: ".$dados['imagem'].'<br>';
-                 echo "fonye: ".$dados['fonte']. '<br>';
-                 echo "autor: ".$dados['autor'].'<br>';
-                 echo "noticia: ".$dados['noticia'].'<br>';                    
+                 echo "<p class= 'titulo'> ".$dados['titulo'].'<br>';
+                 echo "<p class='data e hora'>: ".$dados['datahora'].'<br>';
+                 echo "fonte: ".$dados['fonte']. '<br>';
+                 echo "autor: ".$dados['autor'].'<p>';
+                 echo "<p class='titulo'><img src'='img/".$dados['imagem']."' class='imagem-noticia'></p>";
+                 echo "<p class='noticia'>".$dados['noticia']."</p>";
+                 echo "<a href='index.php'><span class='endereco'>voltar pagina inicial</span></a>";
+                    
             }else{
                 echo 'nao tem conteudo';
             }

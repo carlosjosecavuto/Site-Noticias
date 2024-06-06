@@ -10,6 +10,7 @@ body{
     width: 1280px;
     background-color: rgb(223, 31, 31);
     margin: 0 auto;
+    color: white;
 }
 header{
     width: 1280px;
@@ -40,6 +41,7 @@ header{
     font-family: "Inika", serif;
     font-size: 20px;
     text-align: right;
+    color: white;
 }
 nav{
     width: 1280px;
@@ -68,14 +70,19 @@ nav ul li a:link, a:visited, a:active{
 }
 nav ul li a:hover{
     background-color: rgb(43, 255, 0);
-    color: #fff;
+    color: #cedbcb;
     transition: all 0.3s;
 }
 
-main{
-    background-color: #FFFFFF;
+#main-index{
+    background-color: #0e5208;
     display: grid;
     grid-template-columns: auto auto auto;
+    padding: 30px;    
+}
+
+#main-padrao{
+    background-color: white;
     padding: 30px;
 }
 article{
@@ -85,13 +92,13 @@ article{
     padding: 20px;
     margin: 20px;
     text-align: center;
-    width: 320px; 
+    width: 290px; 
 }
 
 footer{
     width: 1280px;
     height: 100px;
-    background-color: #FFE6D5;
+    background-color: #f8381f;
     display: flex;    
     justify-content: space-around;
     align-items: center;  
@@ -106,7 +113,7 @@ footer a:link, a:visited, a:active{
     font-weight: bold;
     }
 .fotonoticia{
-    width: 312px;
+    width: 280px;
     border-radius: 150px;
 }   
 .textonoticia{
@@ -116,4 +123,29 @@ footer a:link, a:visited, a:active{
 } 
 .saibamais{
     float: right;
+}
+.titulo{
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'kavoon', serif;
+    color: black;    
+}
+.imagem-noticia{
+    width: 70%;
+    margin: 10px;
+}
+.noticia{
+    width: 80%;
+    margin: 0 10%;
+    color: black;
+    font-size: medium;
+    text-align: center;
+    font-family: "inika",serif;
+    background-color: white;
+}
+.endereco{
+    text-decoration: none;
+    color: red;
+    
 }
